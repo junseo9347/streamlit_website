@@ -7,8 +7,8 @@ import pandas as pd
 
 import altair as alt
 
-df_1 = pd.read_csv("C:/Users/junse/PycharmProjects/app_dev/ai/tottenham_win_percent.csv", header=None, names=['Value'])
-df_2 = pd.read_csv("C:/Users/junse/PycharmProjects/app_dev/ai/tottenham_unbeaten_percent.csv",header=None, names=['Value'])
+df_1 = pd.read_csv("tottenham_win_percent.csv", header=None, names=['Value'])
+df_2 = pd.read_csv("tottenham_unbeaten_percent.csv",header=None, names=['Value'])
 
 start_year = 1945
 
@@ -52,8 +52,8 @@ chart = alt.Chart(df_2).mark_line().encode(
 
 st.altair_chart(chart, use_container_width=True)
 
-teams_df = pd.read_csv('C:/Users/junse/PycharmProjects/app_dev/ai/tottenham_win_team.csv', header=None, names=['team'])
-wins_df = pd.read_csv('C:/Users/junse/PycharmProjects/app_dev/ai/tottenham_win_record.csv', header=None, names=['wins'])
+teams_df = pd.read_csv('tottenham_win_team.csv', header=None, names=['team'])
+wins_df = pd.read_csv('tottenham_win_record.csv', header=None, names=['wins'])
 teams_df['wins'] = wins_df['wins']
 
 # Create the bar chart
